@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Li-Fi System — Light-Based Data Transfer</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&family=Exo+2:wght@200;300;400;600;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-brand">
+      <div class="brand-icon">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="12" r="6" fill="var(--accent)"/>
+          <path d="M20 18 L20 34" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M10 22 Q20 28 30 22" stroke="var(--accent-2)" stroke-width="1.5" fill="none" opacity="0.8"/>
+          <path d="M8 27 Q20 35 32 27" stroke="var(--accent-2)" stroke-width="1.5" fill="none" opacity="0.5"/>
+          <path d="M6 32 Q20 42 34 32" stroke="var(--accent-2)" stroke-width="1.5" fill="none" opacity="0.3"/>
+        </svg>
+      </div>
+      <span class="brand-text">Li<span class="accent">Fi</span> System</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#home" class="nav-link active">Home</a></li>
+      <li><a href="#architecture" class="nav-link">Architecture</a></li>
+      <li><a href="#dashboard" class="nav-link">Dashboard</a></li>
+      <li><a href="#monitoring" class="nav-link">Monitor</a></li>
+      <li><a href="#charts" class="nav-link">Analytics</a></li>
+    </ul>
+    <div class="nav-controls">
+      <button class="theme-toggle" id="themeToggle" title="Toggle Dark/Light Mode">
+        <span class="toggle-icon" id="themeIcon">☀️</span>
+      </button>
+      <button class="nav-hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== HERO / HOME ========== -->
+  <section class="hero" id="home">
+    <div class="hero-grid-bg"></div>
+    <div class="hero-beams">
+      <div class="beam beam-1"></div>
+      <div class="beam beam-2"></div>
+      <div class="beam beam-3"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="pulse-dot"></span>
+        Embedded System Project — 2025
+      </div>
+      <h1 class="hero-title">
+        Light Fidelity<br/>
+        <span class="gradient-text">Data Transfer</span><br/>
+        <span class="sub-title">via LED & Photodiode</span>
+      </h1>
+      <p class="hero-desc">
+        A next-generation wireless communication system that transmits data using
+        visible light spectrum. Achieving speeds up to <strong>224 Gbps</strong>
+        with zero RF interference — the future of embedded wireless communication.
+      </p>
+      <div class="hero-cta">
+        <a href="#dashboard" class="btn btn-primary">
+          <span>Launch Dashboard</span>
+          <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"/></svg>
+        </a>
+        <a href="#architecture" class="btn btn-ghost">View Architecture</a>
+      </div>
+      <div class="hero-stats">
+        <div class="h-stat"><span class="h-val">224</span><span class="h-unit">Gbps</span><span class="h-label">Max Speed</span></div>
+        <div class="h-divider"></div>
+        <div class="h-stat"><span class="h-val">10</span><span class="h-unit">GHz</span><span class="h-label">Spectrum</span></div>
+        <div class="h-divider"></div>
+        <div class="h-stat"><span class="h-val">0</span><span class="h-unit">RF</span><span class="h-label">Interference</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="lifi-visual">
+        <div class="led-lamp">
+          <div class="lamp-body"></div>
+          <div class="lamp-glow"></div>
+          <div class="data-rays">
+            <div class="ray ray-1"></div>
+            <div class="ray ray-2"></div>
+            <div class="ray ray-3"></div>
+            <div class="ray ray-4"></div>
+            <div class="ray ray-5"></div>
+          </div>
+        </div>
+        <div class="data-packets">
+          <div class="packet p1">01</div>
+          <div class="packet p2">11</div>
+          <div class="packet p3">00</div>
+          <div class="packet p4">10</div>
+        </div>
+        <div class="receiver-unit">
+          <div class="photodiode"></div>
+          <div class="device-screen">
+            <div class="screen-line"></div>
+            <div class="screen-line short"></div>
+            <div class="screen-line"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== OVERVIEW CARDS ========== -->
+  <section class="overview" id="overview">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Technology Overview</span>
+        <h2>Why <span class="accent">Li-Fi</span>?</h2>
+      </div>
+      <div class="overview-grid">
+        <div class="ov-card">
+          <div class="ov-icon">💡</div>
+          <h3>Visible Light Comm</h3>
+          <p>Utilizes LED light modulation at frequencies imperceptible to the human eye to encode binary data streams in real-time.</p>
+        </div>
+        <div class="ov-card featured">
+          <div class="ov-icon">⚡</div>
+          <h3>Ultra High Speed</h3>
+          <p>Delivers data rates up to 224 Gbps — 100× faster than conventional Wi-Fi by leveraging the vast optical spectrum.</p>
+          <div class="ov-glow"></div>
+        </div>
+        <div class="ov-card">
+          <div class="ov-icon">🔒</div>
+          <h3>Secure Channel</h3>
+          <p>Light cannot penetrate walls, providing inherent physical security — no signal leakage, no eavesdropping.</p>
+        </div>
+        <div class="ov-card">
+          <div class="ov-icon">📡</div>
+          <h3>No RF Pollution</h3>
+          <p>Ideal for hospitals, aircraft, and sensitive environments where RF interference must be eliminated entirely.</p>
+        </div>
+        <div class="ov-card">
+          <div class="ov-icon">🌱</div>
+          <h3>Energy Efficient</h3>
+          <p>LED lighting infrastructure doubles as a data transmission medium — reducing additional hardware overhead significantly.</p>
+        </div>
+        <div class="ov-card">
+          <div class="ov-icon">🏭</div>
+          <h3>Industrial IoT</h3>
+          <p>Enables reliable, interference-free machine-to-machine communication in dense industrial automation environments.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SYSTEM ARCHITECTURE ========== -->
+  <section class="architecture" id="architecture">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">System Design</span>
+        <h2>System <span class="accent">Architecture</span></h2>
+        <p>Complete embedded hardware pipeline from data encoding to reception</p>
+      </div>
+
+      <!-- Architecture Diagram -->
+      <div class="arch-diagram">
+        <!-- Transmitter Side -->
+        <div class="arch-side tx-side">
+          <div class="side-label">TRANSMITTER</div>
+          <div class="arch-block" data-component="mcu">
+            <div class="block-icon">🖥️</div>
+            <div class="block-title">Microcontroller</div>
+            <div class="block-sub">ATmega328P / ESP32</div>
+            <div class="block-detail">Data Encoding & Modulation Control</div>
+          </div>
+          <div class="arch-arrow down">
+            <div class="arrow-label">UART/SPI</div>
+            <div class="arrow-anim"></div>
+          </div>
+          <div class="arch-block" data-component="driver">
+            <div class="block-icon">⚙️</div>
+            <div class="block-title">Driver Circuit</div>
+            <div class="block-sub">MOSFET Gate Driver</div>
+            <div class="block-detail">Current Amplification & Switching</div>
+          </div>
+          <div class="arch-arrow down">
+            <div class="arrow-label">PWM Signal</div>
+            <div class="arrow-anim"></div>
+          </div>
+          <div class="arch-block led-block" data-component="led">
+            <div class="led-pulse-ring"></div>
+            <div class="block-icon">💡</div>
+            <div class="block-title">LED Transmitter</div>
+            <div class="block-sub">High-Power White LED</div>
+            <div class="block-detail">Optical Data Emission</div>
+          </div>
+        </div>
+
+        <!-- Optical Channel -->
+        <div class="arch-channel">
+          <div class="channel-label">OPTICAL CHANNEL</div>
+          <div class="light-beams-arch">
+            <div class="lb lb1"></div>
+            <div class="lb lb2"></div>
+            <div class="lb lb3"></div>
+            <div class="lb lb4"></div>
+            <div class="lb lb5"></div>
+          </div>
+          <div class="channel-info">
+            <span>Free Space</span>
+            <span>Visible Light</span>
+            <span>400–700 THz</span>
+          </div>
+        </div>
+
+        <!-- Receiver Side -->
+        <div class="arch-side rx-side">
+          <div class="side-label">RECEIVER</div>
+          <div class="arch-block" data-component="display">
+            <div class="block-icon">📺</div>
+            <div class="block-title">Display Module</div>
+            <div class="block-sub">16×2 LCD / OLED</div>
+            <div class="block-detail">Data Output & Status Display</div>
+          </div>
+          <div class="arch-arrow up">
+            <div class="arrow-label">I2C/GPIO</div>
+            <div class="arrow-anim"></div>
+          </div>
+          <div class="arch-block" data-component="mcu-rx">
+            <div class="block-icon">🖥️</div>
+            <div class="block-title">Microcontroller</div>
+            <div class="block-sub">ATmega328P / ESP32</div>
+            <div class="block-detail">Data Decoding & Processing</div>
+          </div>
+          <div class="arch-arrow up">
+            <div class="arrow-label">Analog Signal</div>
+            <div class="arrow-anim"></div>
+          </div>
+          <div class="arch-block" data-component="photodiode">
+            <div class="block-icon">📷</div>
+            <div class="block-title">Photodiode Receiver</div>
+            <div class="block-sub">BPW34 / OPT101</div>
+            <div class="block-detail">Light-to-Current Conversion</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Component Cards -->
+      <div class="component-cards">
+        <div class="comp-card" onclick="showComponentDetail('led')">
+          <div class="comp-num">01</div>
+          <div class="comp-name">LED Transmitter</div>
+          <div class="comp-spec">White LED, 5W, 850nm IR option</div>
+        </div>
+        <div class="comp-card" onclick="showComponentDetail('driver')">
+          <div class="comp-num">02</div>
+          <div class="comp-name">Driver Circuit</div>
+          <div class="comp-spec">IRF540N MOSFET, 100MHz switching</div>
+        </div>
+        <div class="comp-card" onclick="showComponentDetail('channel')">
+          <div class="comp-num">03</div>
+          <div class="comp-name">Optical Channel</div>
+          <div class="comp-spec">Free-space, up to 10m range</div>
+        </div>
+        <div class="comp-card" onclick="showComponentDetail('photodiode')">
+          <div class="comp-num">04</div>
+          <div class="comp-name">Photodiode</div>
+          <div class="comp-spec">BPW34, 0.62A/W sensitivity</div>
+        </div>
+        <div class="comp-card" onclick="showComponentDetail('mcu')">
+          <div class="comp-num">05</div>
+          <div class="comp-name">Microcontroller</div>
+          <div class="comp-spec">ESP32, 240MHz dual-core</div>
+        </div>
+        <div class="comp-card" onclick="showComponentDetail('display')">
+          <div class="comp-num">06</div>
+          <div class="comp-name">Display Module</div>
+          <div class="comp-spec">0.96" OLED, 128×64 I2C</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Component Detail Modal -->
+  <div class="modal-overlay" id="componentModal">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div class="modal-content" id="modalContent"></div>
+    </div>
+  </div>
+
+  <!-- ========== DASHBOARD ========== -->
+  <section class="dashboard" id="dashboard">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Control Center</span>
+        <h2>Data Transfer <span class="accent">Dashboard</span></h2>
+      </div>
+
+      <!-- Transmission Status Bar -->
+      <div class="status-bar">
+        <div class="status-indicator" id="systemStatus">
+          <div class="status-led" id="statusLed"></div>
+          <span id="statusText">System Ready</span>
+        </div>
+        <div class="transmission-controls">
+          <button class="ctrl-btn start" id="startBtn" onclick="startTransmission()">
+            ▶ Start Transmission
+          </button>
+          <button class="ctrl-btn stop" id="stopBtn" onclick="stopTransmission()" disabled>
+            ⏹ Stop
+          </button>
+          <button class="ctrl-btn clear" onclick="clearData()">
+            🗑 Clear Data
+          </button>
+          <button class="ctrl-btn export" onclick="exportReport()">
+            ⬇ Export Report
+          </button>
+        </div>
+      </div>
+
+      <!-- Sender / Receiver Panels -->
+      <div class="transfer-panels">
+
+        <!-- Sender Panel -->
+        <div class="panel sender-panel">
+          <div class="panel-header">
+            <div class="panel-icon tx">📡</div>
+            <div>
+              <h3>Transmitter — LED Node</h3>
+              <span class="panel-sub">ATmega328P TX Unit</span>
+            </div>
+            <div class="signal-strength-mini" id="txSignal">
+              <div class="bar b1 active"></div>
+              <div class="bar b2 active"></div>
+              <div class="bar b3 active"></div>
+              <div class="bar b4"></div>
+            </div>
+          </div>
+          <div class="panel-body">
+            <div class="input-group">
+              <label for="messageInput">Message to Transmit</label>
+              <textarea id="messageInput" placeholder="Enter data to transmit via Li-Fi channel..." maxlength="500" rows="4"></textarea>
+              <div class="input-meta">
+                <span class="char-count" id="charCount">0 / 500 chars</span>
+                <span class="validation-msg" id="validationMsg"></span>
+              </div>
+            </div>
+            <div class="encoding-options">
+              <label>Encoding Scheme</label>
+              <div class="radio-group">
+                <label class="radio-opt">
+                  <input type="radio" name="encoding" value="OOK" checked /> OOK
+                </label>
+                <label class="radio-opt">
+                  <input type="radio" name="encoding" value="OFDM" /> OFDM
+                </label>
+                <label class="radio-opt">
+                  <input type="radio" name="encoding" value="PPM" /> PPM
+                </label>
+              </div>
+            </div>
+            <button class="btn btn-send" id="sendBtn" onclick="sendMessage()">
+              <span class="btn-text">⚡ Transmit via Light</span>
+              <div class="btn-wave"></div>
+            </button>
+            <div class="tx-history">
+              <h4>Transmission History</h4>
+              <div class="history-list" id="txHistory">
+                <div class="history-empty">No transmissions yet</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Channel Visualization -->
+        <div class="channel-visual">
+          <div class="channel-label-v">OPTICAL CHANNEL</div>
+          <div class="channel-beam-container">
+            <div class="led-source" id="ledSource">💡</div>
+            <div class="beam-line" id="beamLine">
+              <div class="traveling-bits" id="travelingBits"></div>
+            </div>
+            <div class="photodiode-recv" id="photodiodeRecv">📷</div>
+          </div>
+          <div class="channel-metrics">
+            <div class="cm-item">
+              <span class="cm-label">BER</span>
+              <span class="cm-val" id="berDisplay">0.001%</span>
+            </div>
+            <div class="cm-item">
+              <span class="cm-label">SNR</span>
+              <span class="cm-val" id="snrDisplay">28 dB</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Receiver Panel -->
+        <div class="panel receiver-panel">
+          <div class="panel-header">
+            <div class="panel-icon rx">📻</div>
+            <div>
+              <h3>Receiver — Photodiode Node</h3>
+              <span class="panel-sub">ATmega328P RX Unit</span>
+            </div>
+            <div class="signal-strength-mini" id="rxSignal">
+              <div class="bar b1"></div>
+              <div class="bar b2"></div>
+              <div class="bar b3"></div>
+              <div class="bar b4"></div>
+            </div>
+          </div>
+          <div class="panel-body">
+            <div class="received-display">
+              <label>Received Data Stream</label>
+              <div class="rx-screen" id="rxScreen">
+                <div class="rx-cursor"></div>
+                <div class="rx-placeholder">Awaiting light signal...</div>
+              </div>
+            </div>
+            <div class="decode-info">
+              <div class="di-item">
+                <span>Decoding</span>
+                <span id="decodingScheme">—</span>
+              </div>
+              <div class="di-item">
+                <span>Packets Recv</span>
+                <span id="packetsRecvDisplay">0</span>
+              </div>
+              <div class="di-item">
+                <span>Integrity</span>
+                <span id="integrityDisplay" class="good">—</span>
+              </div>
+            </div>
+            <div class="rx-history">
+              <h4>Received Messages</h4>
+              <div class="history-list" id="rxHistory">
+                <div class="history-empty">No messages received</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PERFORMANCE MONITORING ========== -->
+  <section class="monitoring" id="monitoring">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Real-Time Analytics</span>
+        <h2>Performance <span class="accent">Monitoring</span></h2>
+      </div>
+
+      <!-- Live Stats Cards -->
+      <div class="live-stats">
+        <div class="stat-card" id="sc-sent">
+          <div class="sc-icon">📤</div>
+          <div class="sc-value counter" id="totalSent">0</div>
+          <div class="sc-label">Total Packets Sent</div>
+          <div class="sc-bar"><div class="sc-fill" id="sentFill"></div></div>
+        </div>
+        <div class="stat-card" id="sc-recv">
+          <div class="sc-icon">📥</div>
+          <div class="sc-value counter" id="totalRecv">0</div>
+          <div class="sc-label">Total Packets Received</div>
+          <div class="sc-bar"><div class="sc-fill" id="recvFill"></div></div>
+        </div>
+        <div class="stat-card success" id="sc-success">
+          <div class="sc-icon">✅</div>
+          <div class="sc-value counter" id="successCount">0</div>
+          <div class="sc-label">Successful Transfers</div>
+          <div class="sc-bar"><div class="sc-fill" id="successFill" style="background:var(--green)"></div></div>
+        </div>
+        <div class="stat-card fail" id="sc-fail">
+          <div class="sc-icon">❌</div>
+          <div class="sc-value counter" id="failCount">0</div>
+          <div class="sc-label">Failed Transfers</div>
+          <div class="sc-bar"><div class="sc-fill" id="failFill" style="background:var(--red)"></div></div>
+        </div>
+      </div>
+
+      <!-- Performance Meters -->
+      <div class="perf-meters">
+        <div class="meter-card">
+          <div class="meter-header">
+            <span>Data Rate</span>
+            <span class="meter-val" id="dataRateVal">0.00 Mbps</span>
+          </div>
+          <div class="meter-track">
+            <div class="meter-fill" id="dataRateMeter" style="width:0%"></div>
+          </div>
+          <div class="meter-range"><span>0</span><span>100 Mbps</span></div>
+        </div>
+        <div class="meter-card">
+          <div class="meter-header">
+            <span>Signal Strength</span>
+            <span class="meter-val" id="signalVal">0 dBm</span>
+          </div>
+          <div class="meter-track">
+            <div class="meter-fill signal" id="signalMeter" style="width:0%"></div>
+          </div>
+          <div class="meter-range"><span>−90 dBm</span><span>0 dBm</span></div>
+        </div>
+        <div class="meter-card">
+          <div class="meter-header">
+            <span>Bit Error Rate</span>
+            <span class="meter-val" id="berVal">0.000%</span>
+          </div>
+          <div class="meter-track">
+            <div class="meter-fill ber" id="berMeter" style="width:0%"></div>
+          </div>
+          <div class="meter-range"><span>0%</span><span>10%</span></div>
+        </div>
+        <div class="meter-card">
+          <div class="meter-header">
+            <span>Packet Success Rate</span>
+            <span class="meter-val" id="psrVal">0%</span>
+          </div>
+          <div class="meter-track">
+            <div class="meter-fill psr" id="psrMeter" style="width:0%"></div>
+          </div>
+          <div class="meter-range"><span>0%</span><span>100%</span></div>
+        </div>
+        <div class="meter-card">
+          <div class="meter-header">
+            <span>Transfer Time</span>
+            <span class="meter-val" id="transferTimeVal">0 ms</span>
+          </div>
+          <div class="meter-track">
+            <div class="meter-fill time" id="timeMeter" style="width:0%"></div>
+          </div>
+          <div class="meter-range"><span>0 ms</span><span>5000 ms</span></div>
+        </div>
+        <div class="meter-card">
+          <div class="meter-header">
+            <span>Optical Power</span>
+            <span class="meter-val" id="optPowerVal">0 mW</span>
+          </div>
+          <div class="meter-track">
+            <div class="meter-fill opt" id="optMeter" style="width:0%"></div>
+          </div>
+          <div class="meter-range"><span>0 mW</span><span>500 mW</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CHARTS ========== -->
+  <section class="charts-section" id="charts">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Data Visualization</span>
+        <h2>Live <span class="accent">Analytics</span></h2>
+      </div>
+      <div class="charts-grid">
+        <!-- Transmission Speed Chart -->
+        <div class="chart-card">
+          <div class="chart-header">
+            <h3>Transmission Speed (Mbps)</h3>
+            <div class="chart-legend">
+              <span class="leg-dot" style="background:var(--accent)"></span> Actual
+              <span class="leg-dot" style="background:var(--accent-2)"></span> Peak
+            </div>
+          </div>
+          <div class="chart-wrapper">
+            <canvas id="speedChart"></canvas>
+          </div>
+        </div>
+
+        <!-- Signal Strength Chart -->
+        <div class="chart-card">
+          <div class="chart-header">
+            <h3>Signal Strength (dBm)</h3>
+            <div class="chart-legend">
+              <span class="leg-dot" style="background:var(--green)"></span> Signal Level
+            </div>
+          </div>
+          <div class="chart-wrapper">
+            <canvas id="signalChart"></canvas>
+          </div>
+        </div>
+
+        <!-- Packet Delivery Chart -->
+        <div class="chart-card wide">
+          <div class="chart-header">
+            <h3>Packet Delivery Ratio</h3>
+            <div class="chart-legend">
+              <span class="leg-dot" style="background:var(--green)"></span> Success
+              <span class="leg-dot" style="background:var(--red)"></span> Failed
+            </div>
+          </div>
+          <div class="chart-wrapper">
+            <canvas id="packetChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== APPLICATIONS ========== -->
+  <section class="applications" id="applications">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Use Cases</span>
+        <h2>Real-World <span class="accent">Applications</span></h2>
+      </div>
+      <div class="app-grid">
+        <div class="app-card">
+          <div class="app-icon">🏥</div>
+          <h3>Healthcare</h3>
+          <p>Safe communication in ICUs, OTs, and MRI rooms where RF is hazardous to sensitive medical equipment.</p>
+        </div>
+        <div class="app-card">
+          <div class="app-icon">✈️</div>
+          <h3>Aviation</h3>
+          <p>In-flight entertainment and cabin communications without RF interference to navigation systems.</p>
+        </div>
+        <div class="app-card">
+          <div class="app-icon">🏭</div>
+          <h3>Industry 4.0</h3>
+          <p>Factory automation with interference-free machine-to-machine optical data links.</p>
+        </div>
+        <div class="app-card">
+          <div class="app-icon">🏫</div>
+          <h3>Smart Classrooms</h3>
+          <p>High-bandwidth internet to every desk through ceiling LED panels — no Wi-Fi congestion.</p>
+        </div>
+        <div class="app-card">
+          <div class="app-icon">🚗</div>
+          <h3>Vehicular Comms</h3>
+          <p>V2V and V2I communication using traffic lights and headlamps for low-latency data exchange.</p>
+        </div>
+        <div class="app-card">
+          <div class="app-icon">🌊</div>
+          <h3>Underwater Comms</h3>
+          <p>Blue-green light penetrates water far better than RF — enabling deep-sea IoT networks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">Li<span class="accent">Fi</span> System</div>
+          <p>An embedded systems project demonstrating light-based data communication using LED and photodiode technology.</p>
+        </div>
+        <div class="footer-info">
+          <h4>Project Info</h4>
+          <ul>
+            <li>Platform: Arduino / ESP32</li>
+            <li>Modulation: OOK / OFDM / PPM</li>
+            <li>Range: Up to 10 meters</li>
+            <li>Frequency: 400–700 THz</li>
+          </ul>
+        </div>
+        <div class="footer-enhancements">
+          <h4>Future Enhancements</h4>
+          <ul>
+            <li>📶 MIMO Li-Fi Arrays</li>
+            <li>🔐 AES-256 Encryption Layer</li>
+            <li>🤖 AI-based Beam Tracking</li>
+            <li>🌐 Li-Fi — Wi-Fi Hybrid Mode</li>
+            <li>📊 Cloud Analytics Dashboard</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Li-Fi Embedded System Project</span>
+        <span>Built with HTML5 · CSS3 · Vanilla JS ES6</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notifications -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
